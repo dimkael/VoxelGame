@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 2.6)
 
 project(VoxelGame)
 
@@ -17,4 +17,7 @@ add_subdirectory(libs/glfw)
 add_subdirectory(libs/glew)
      
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} glfw libglew_shared)
+
+#target_include_directories(${PROJECT_NAME} PUBLIC libs/glew/include)
+
+target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} glfw libglew_static)
