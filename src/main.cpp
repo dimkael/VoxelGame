@@ -1,9 +1,11 @@
 #include <iostream>
 
+#include <GLFW/glfw3.h>
+
 
 int main()
 {
-	std::cout << "Hello, world!" << '\n';
+	glfwInit();
 
 	return 0;
 }
